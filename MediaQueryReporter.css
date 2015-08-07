@@ -1,0 +1,51 @@
+/* ======================================
+ 
+    Media Query-Reporter 
+ 
+========================================= */
+
+body:after {
+	content: "less than 320px";
+
+	font-size: 100%;
+	position: fixed;
+	bottom: 40px;
+	width: 100%;
+
+	text-align: center;
+	background-color: hsla(1,60%,40%,0.7);
+	font-weight: bold;
+	color: #fff;
+}
+
+@media only screen and (min-width: 320px) {
+	/*shows up when screen is wider than 320px*/
+	body:after {
+		content: "320 to 480px";
+		background-color: hsla(90,60%,40%,0.7);
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	/*shows up when screen is wider than 480px*/
+	body:after {
+		content: "480 to 768px";
+		background-color: hsla(180,60%,40%,0.7);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/*shows up when screen is wider than 768px*/
+	body:after {
+		content: "768 to 1024px";
+		background-color: hsla(312,21%,29%,0.7);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	/*shows up when screen is wider than 1024px*/
+	body:after {
+		content: "1024px and up";
+		background-color: hsla(2,31%,53%,0.7);
+	}
+}
